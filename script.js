@@ -80,5 +80,6 @@ paragraphs.forEach(p => {
   if (newParagraph.length > 50) {
     newParagraph.splice(50);
   }
-  p.textContent = newParagraph + '... More';
+  console.log(newParagraph.join(' '));
+  p.textContent = newParagraph.join(' ') + '......... More';
 });
