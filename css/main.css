@@ -18,6 +18,20 @@
   --head-height: 5em;
 }
 
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--light-bg);
+}
+
 body nav {
   position: absolute;
   top: 0;
@@ -141,8 +155,17 @@ body nav .menu-btn {
   display: none;
 }
 
+body main {
+  min-height: 100vh;
+  width: calc(100vw - 15em);
+  background-color: #fff;
+}
+
+body main p {
+  letter-spacing: 0.12rem;
+}
+
 body footer {
-  margin-top: 0.5em;
   background-color: #fff;
   gap: 2em;
   width: 100vw;
@@ -189,8 +212,7 @@ body .sidebar {
       -ms-flex-align: center;
           align-items: center;
   top: 50%;
-  border: 2px solid #000;
-  border-radius: 1em;
+  border-radius: 0.5em;
   padding: 0.5em;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -202,8 +224,6 @@ body .sidebar {
   pointer-events: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  -webkit-box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 body .sidebar.show {
@@ -221,26 +241,16 @@ body .sidebar ul li {
 
 body .sidebar ul li a {
   color: #575757;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 body .sidebar ul li a:hover i {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 body.home {
-  background: var(--light-bg);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative;
 }
 
@@ -354,7 +364,7 @@ body.home header section .carousel .carousel-manually ul {
 }
 
 body.home header section .carousel .carousel-manually ul li {
-  border: 1px solid #777;
+  border: 1px solid #222;
   border-radius: 5em;
   width: 1.5em;
   height: 0.5em;
@@ -362,7 +372,7 @@ body.home header section .carousel .carousel-manually ul li {
 }
 
 body.home header section .carousel .carousel-manually ul li.select {
-  background-color: #222;
+  background-color: #000;
 }
 
 body.home header section .intro {
@@ -470,25 +480,46 @@ body.home header section .intro .content:hover:before {
 
 body.home main {
   width: calc(100vw - 15em);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid #000;
 }
 
 body.home main section {
-  width: 70%;
-  padding: 1em;
+  width: 100%;
+  padding: 0 1em;
   background-color: #fff;
+}
+
+body.home main section .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.2rem;
+  padding: 1em 0;
+  padding-left: 1em;
+  gap: 0.5em;
+}
+
+body.home main section .title h1 {
+  font-size: 1.7rem;
 }
 
 body.home main section article {
   width: 100%;
   height: 10em;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
 }
 
 body.home main section article:nth-of-type(1) {
   border-top: 1px solid #000;
+}
+
+body.home main section article:hover {
+  -webkit-transform: translateY(-0.2em);
+          transform: translateY(-0.2em);
+  background-color: #e5e6e7;
 }
 
 body.home main section article a {
@@ -522,12 +553,6 @@ body.home main section article a .content {
   padding: 1em 0;
 }
 
-body.home main aside {
-  background-color: #ececed;
-  border-left: 1px solid #000;
-  width: 30%;
-}
-
 body.home .block {
   content: '';
   position: absolute;
@@ -539,6 +564,7 @@ body.home .block {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 30%;
+  pointer-events: none;
   z-index: 5;
 }
 
@@ -571,18 +597,106 @@ body.home .block:before {
   transition: all 0.5s ease;
 }
 
-body.roadmap {
+body.home .pagination {
+  width: calc(100vw - 15em);
+  margin: 0.5em 0;
+}
+
+body.home .pagination ul {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5em;
+  list-style: none;
+}
+
+body.home .pagination ul li {
+  cursor: pointer;
+  aspect-ratio: 1/1;
+  width: 1.5em;
+  padding: 0.1em;
+  text-align: center;
+  font-size: 1rem;
+}
+
+body.home .pagination ul li i {
+  pointer-events: none;
+}
+
+body.home .pagination ul li.active {
+  color: red;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body.home .pagination ul li.hide {
+  pointer-events: none;
+  opacity: 0;
+}
+
+body.article header {
+  width: 100vw;
+  height: 5em;
+}
+
+body.article main {
+  padding: 1em 2em;
+}
+
+body.article main span {
+  color: #3579b9;
+}
+
+body.article main img {
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  border-radius: 0.2rem;
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+body.article main img.path {
+  width: 12em;
+}
+
+body.article main img.self-learning {
+  width: 15em;
+}
+
+body.article main img.froggy {
+  width: 12em;
+}
+
+body.article main img.cat {
+  width: 20em;
+}
+
+body.article main.job {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body.article main.job .img-job {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: var(--light-bg);
+}
+
+body.article main.job .img-job img.job {
+  width: 20em;
+  margin-bottom: 0;
 }
 
 body.roadmap header {
@@ -590,11 +704,9 @@ body.roadmap header {
   height: 5em;
 }
 
-body.roadmap main {
-  width: calc(100vw - 15em);
-  border: 1px solid #000;
-  height: 150vh;
-  background-color: #fff;
+body.projects header {
+  width: 100vw;
+  height: 5em;
 }
 
 @-webkit-keyframes titleColor {
@@ -658,6 +770,18 @@ body.roadmap main {
     -webkit-transform: rotateZ(360deg);
             transform: rotateZ(360deg);
     left: 80%;
+  }
+}
+
+@-webkit-keyframes articleDot {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes articleDot {
+  from {
+    width: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
