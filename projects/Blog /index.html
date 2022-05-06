@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog's Video</title>
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #eee;
+      font-family: 'Shadows Into Light', cursive;
+      font-size: 18px;
+    }
+    .container {
+      background-color: #fff;
+      padding: 2em;
+      border-radius: 0.2em;
+      box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: calc(100vw - 20em);
+      gap: 2em;
+    }
+    .video {
+      width: 50%;
+      box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+    }
+    video {
+      width: 100%;
+    }
+    .intro {
+      width: 50%;
+    }
+    span {
+      color: rgb(54, 88, 161);
+    }
+    .point {
+      color: red;
+    }
+    a {
+      color: #000;
+    }
+    a:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="video">
+        <video src="Blog.mp4" controls></video>
+      </div>
+      <div class="intro">
+        <h2>Alan's Blog</h2>
+        <p>
+          &emsp; I'm using the "JSON SERVER" to create my
+          <span class="point">Local Database</span> for training Restful API.
+          The methods I use "GET", "POST", "PATCH", "DELETE", which are CRUD.
+          This is my first time to touch the CRUD. It's not very familiar, and
+          the "Promise", "Async", I'm still on training to operate. <br />
+          <br />
+          Intro the Blog, I let all method(CRUD) become the
+          <span class="point">Functions</span>. <br />
+          1. Render Webiste from JSON : Call function <span>"GET"</span>. <br />
+          2. Add data to JSON : Call function <span>"POST"</span>, body:
+          JSON.stringify(data);
+          <br />
+          3. Revise part of JSON obj : Call function <span>"PATCH"</span>, + id,
+          body: JSON.stringify(data); <br />
+          4. Delete the JSON obj : Call function <span>"DELETE"</span>, + id;
+          <br />
+          <br />
+          SOURCE CODE:
+          <a
+            href="https://github.com/i39u65f51q/JS-Training/tree/master/api-projects/Blog"
+          >
+            GitHub</a
+          >
+          <br />
+          <br />
+          Alan Chen,
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
