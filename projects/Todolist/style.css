@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #eee;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  width: calc(100vw - 20em);
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 0.3em;
+  box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.5);
+}
+.todolist {
+  width: 50%;
+  border-radius: 0.2em;
+  padding: 0.5em;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.5);
+}
+.input-text {
+  width: 100%;
+  font-size: 18px;
+  padding: 0.3em 0.5em;
+}
+.filter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+  margin: 0.5em 0;
+  list-style: none;
+}
+.filter li {
+  font-size: 14px;
+  width: 5em;
+  text-align: center;
+  background-color: rgb(244, 244, 244);
+  border: 1px solid #ccc;
+  border-radius: 0.2em;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.filter li:hover {
+  transform: translate(1px, 1px);
+  box-shadow: none;
+}
+.filter li.active {
+  color: rgb(76, 142, 212);
+}
+main {
+  width: 100%;
+  background-color: #eee;
+  border-radius: 0.3em;
+  height: 15em;
+  max-height: 15em;
+  overflow-y: auto;
+  box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+main ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+main ul li {
+  border-bottom: 1px solid #ccc;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main ul li .todo {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+main ul li .buttons {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+main ul li .buttons i {
+  cursor: pointer;
+  font-size: 18px;
+}
+main ul li .buttons i.bxs-edit:hover {
+  color: rgb(37, 177, 46);
+}
+main ul li .buttons i.bx-trash:hover {
+  color: rgb(222, 53, 53);
+}
+label.checked {
+  text-decoration: line-through;
+}
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5em;
+}
+footer span {
+  color: rgb(76, 142, 212);
+}
+
+.intro {
+  width: 50%;
+}
+main input.edit {
+  font-size: 16px;
+  padding: 0 0.5em;
+  border-radius: 0.3em;
+  width: 100%;
+}
+.intro a {
+  color: #000;
+}
+.intro a:hover {
+  background-color: #000;
+  color: #fff;
+}
+.intro span {
+  color: rgb(68, 108, 194);
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoList</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="todolist">
+        <header>
+          <input
+            class="input-text"
+            type="text"
+            placeholder="Press Enter to add pending "
+          />
+        </header>
+        <ul class="filter">
+          <li class="all active">All</li>
+          <li>Pending</li>
+          <li>Done</li>
+        </ul>
+        <main>
+          <ul>
+            <li>
+              <div class="todo">
+                <input type="checkbox" name="" id="todo-2" checked />
+                <label for="todo-2"> Training Promise</label>
+              </div>
+              <div class="buttons">
+                <i class="bx bxs-edit"></i>
+                <i class="bx bx-trash"></i>
+              </div>
+            </li>
+          </ul>
+        </main>
+        <footer>
+          <p>There's <span>0</span> on pending.</p>
+        </footer>
+      </div>
+      <div class="intro">
+        <h2>TodoList</h2>
+        <p>
+          &emsp; The data of Todolist is saved on
+          <span>LocalStorage</span>. This is my second times to do with
+          functions of <span>Filter</span>, <span>Edit</span>,
+          <span>Delete</span> by myself. Therefore, it has lots of places that
+          can be upgraded. I don't make the Filter function on render greatly,
+          maybe next time I will try better. I hope you enjoy it. <br /><br />
+          Source Code:
+          <a
+            href="https://github.com/i39u65f51q/JS-Portofolio/tree/master/projects/Todolist"
+            >Click Here</a
+          ><br /><br />
+          Alan Chen,
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
