@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #eee;
+}
+.container {
+  width: calc(100vw - 15em);
+  background-color: #fff;
+  box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 0.2em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
+.shopping {
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.5);
+}
+.shopping nav {
+  width: 100%;
+  background-color: rgb(238, 238, 238);
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.5);
+}
+.shopping nav ul {
+  display: flex;
+  gap: 1em;
+  padding: 0.5em;
+  height: 3em;
+}
+.shopping nav ul li {
+  width: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.2em;
+  padding: 0.2rem 0;
+  background-color: #fff;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.shopping nav ul li:hover {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+.shopping nav ul li.carts {
+  position: relative;
+  width: 3em;
+}
+.shopping nav ul li.carts i {
+  font-size: 1.3rem;
+}
+.shopping nav ul li.carts span {
+  position: absolute;
+  text-align: center;
+  font-size: 16px;
+  right: -0.5em;
+  top: -0.5em;
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #222;
+  border: 1px solid #ccc;
+  color: #fff;
+  pointer-events: none;
+}
+.content {
+  width: 100%;
+  min-height: 50vh;
+  position: relative;
+}
+.content .page {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  background-color: #444;
+}
+.content .page ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em 0;
+}
+.content .page ul li {
+  height: 4.5em;
+  width: 95%;
+  border-radius: 0.2em;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em;
+}
+.content .page ul li .img {
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+.content .page ul li .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.content .page ul li i {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.content .page ul li .count {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.content .page ul li .count span {
+  width: 1.5em;
+  text-align: center;
+  background-color: #eee;
+  border-radius: 0.2em;
+}
+.content .page ul li .product-name {
+  display: flex;
+  justify-content: space-between;
+  width: 10em;
+}
+.intro {
+  width: 50%;
+  display: none;
+}
+.carts {
+  display: none;
+}
