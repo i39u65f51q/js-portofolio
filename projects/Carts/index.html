@@ -16,7 +16,7 @@
       <div class="shopping">
         <nav>
           <ul>
-            <li>Products</li>
+            <li class="products">Products</li>
             <li class="carts">
               <i class="bx bx-cart-alt"> </i>
               <span>0</span>
@@ -27,24 +27,27 @@
           <div class="page products">
             <ul></ul>
           </div>
-          <div class="page carts">
-            <ul>
-              <li></li>
-              <li></li>
-            </ul>
-            <footer></footer>
+          <div class="page carts hide">
+            <ul></ul>
+            <footer>
+              <p>Total Count: <span>5</span> / Price: $<span>9999</span></p>
+            </footer>
           </div>
         </div>
       </div>
       <div class="intro">
         <h2>Shopping Carts</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cum
-          iure exercitationem nesciunt fugit ullam harum neque! Nemo fuga
-          facilis, amet veritatis aut officia, eos ea praesentium nobis deleniti
-          repellat quod, consequatur laborum itaque architecto dolores ut.
-          Sapiente harum molestias explicabo voluptatem facere quo assumenda
-          quisquam tempore ullam veritatis? Quod.
+          &emsp; The data of Shopping Carts is stored on
+          <span>LocalStorage</span>. This is first time to make shopping carts.
+          It's kind of different with TodoList. From Product page to Carts page,
+          It needs to render two page. The <span>Products</span> is render by
+          objects, and <span>Carts</span> is render by LocalStorage. The big
+          problem I face, which is adding the same type of product to
+          localStorage. I think it's first time, so I'm not familiar. I think
+          next time I make shopping carts must be better, because I have done
+          this once by myself. <br /><br />
+          Alan, Chen
         </p>
       </div>
     </div>

@@ -91,9 +91,107 @@ function addProductToCart() {
     item.count = 1;
   });
 
-  console.log(carts);
   localStorage.setItem('carts', JSON.stringify(carts));
   productRender();
+  cartsRender();
+}
+function cartsRender() {
+  const cartsList = [];
+  const ul = document.querySelector('.content .carts ul');
+  for (let i = 0; i < carts.length; i++) {
+    let li = `<li id="${i}">
+    <div class="img">
+      <img src="${carts[i].img}" alt="" />
+    </div>
+    <div class="product-name">
+      <h4>${carts[i].name}</h4>
+      <p>$${carts[i].price}/per</p>
+    </div>
+    <div class="count">
+      <i class="bx bx-minus"></i>
+      <span>${carts[i].count}</span>
+      <i class="bx bx-plus"></i>
+    </div>
+    <div class="cart-remove">
+      <i class="bx bxs-trash"></i>
+    </div>
+  </li>
+  `;
+    cartsList.push(li);
+  }
+  ul.innerHTML = cartsList.join('');
+
+  const DeleteBtns = document.querySelectorAll('.bxs-trash');
+  DeleteBtns.forEach(btn => {
+    btn.addEventListener('click', deleteProductFromCarts);
+  });
+  //CounButtons Events
+  const plusBtns = document.querySelectorAll('.carts .count .bx-plus');
+  plusBtns.forEach((btn, i) =>
+    btn.addEventListener('click', () => {
+      carts[i].count += 1;
+      localStorage.setItem('carts', JSON.stringify(carts));
+      cartsRender();
+    })
+  );
+  const minusBtns = document.querySelectorAll('.carts .count .bx-minus');
+  minusBtns.forEach((btn, i) =>
+    btn.addEventListener('click', () => {
+      carts[i].count -= 1;
+      if (carts[i].count < 1) {
+        carts[i].count = 1;
+      }
+      localStorage.setItem('carts', JSON.stringify(carts));
+      cartsRender();
+    })
+  );
+  //Counts & Prices
+  let totalCount = 0;
+  let totalPrice = 0;
+  const eachProductPrice = carts.map(item => Number(item.price));
+  const eachProductCount = carts.map(item => item.count);
+
+  if (carts.length > 0) {
+    carts
+      .map(item => item.count)
+      .reduce((total, next) => {
+        total += next;
+        totalCount = total;
+        return totalCount;
+      }, 0);
+
+    for (let i = 0; i < carts.length; i++) {
+      totalPrice += eachProductPrice[i] * eachProductCount[i];
+    }
+  }
+
+  // console.log(eachProductPrice, eachProductCount);
+  const iconCart = document.querySelector('nav ul li.carts span');
+  const footerCart = document.querySelector('.carts footer');
+  iconCart.textContent = totalCount;
+  footerCart.innerHTML = `<p>Total Count: <span>${totalCount}</span> / Price: $<span>${totalPrice}</span></p>`;
+}
+function deleteProductFromCarts() {
+  const id = this.parentNode.parentNode.getAttribute('id');
+  carts.splice(id, 1);
+  localStorage.setItem('carts', JSON.stringify(carts));
+  cartsRender();
 }
 
+//NAV
+document.querySelectorAll('nav ul li').forEach(btn => {
+  btn.addEventListener('click', e => {
+    const productsPage = document.querySelector('.content .products');
+    const cartsPage = document.querySelector('.content .carts');
+    if (e.currentTarget.classList.contains('carts')) {
+      productsPage.classList.add('hide');
+      cartsPage.classList.remove('hide');
+    }
+    if (e.currentTarget.classList.contains('products')) {
+      cartsPage.classList.add('hide');
+      productsPage.classList.remove('hide');
+    }
+  });
+});
+cartsRender();
 productRender();
