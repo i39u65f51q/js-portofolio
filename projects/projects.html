@@ -11,8 +11,135 @@
       rel="stylesheet"
     />
   </head>
-
-  <body>
-    <script src="script.js"></script>
+  <body class="projects">
+    <header>
+      <nav>
+        <div class="title">
+          <h1>Welcome ! Here's <span>Alan's </span>Portfolio.</h1>
+          <button class="color-switch">
+            <i class="bx bx-moon"></i>
+          </button>
+        </div>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../roadmap/roadmap.html">Roadmap</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+        <button class="menu-btn">
+          <i class="bx bx-menu"></i>
+        </button>
+      </nav>
+    </header>
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a href="../index.html"><i class="bx bx-home"></i></a>
+        </li>
+        <li>
+          <a href="../roadmap/roadmap.html">
+            <i class="bx bx-map-alt"></i>
+          </a>
+        </li>
+        <li>
+          <a href="./projects.html"
+            ><i class="bx bx-folder-open"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+    <main>
+      <div class="title">
+        <h1>My JavaScript Training Projects</h1>
+      </div>
+      <ul>
+        <a href="./Weather API/index.html">
+        <li>
+          <div class="img">
+            <img src="./projectsImg/weather.png" alt="" />
+          </div>
+          <div class="text">
+            <h2>Weather API</h2>
+            <p>
+              &emsp; This project is using the Weather API to get the information of
+          weather in Taiwan. I use method of "GET" to connect the data, and
+          render my website.
+            </p>
+          </div>
+        </a>
+        </li>
+        <li>
+          <a href="./Todolist/index.html">
+            <div class="img">
+              <img src="./projectsImg/todolist.png" alt="" />
+            </div>
+            <div class="text">
+              <h2>TodoList</h2>
+              <p>
+                &emsp; The data of Todolist is stored on
+                LocalStorage. This is my second times to do with
+                functions of Filter, Edit,
+                Delete by myself.
+              </p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="./Carts/index.html">
+            <div class="img">
+              <img src="./projectsImg/carts.png" alt="" />
+            </div>
+            <div class="text">
+              <h2>Shopping Carts</h2>
+              <p>
+                &emsp; The data of Shopping Carts is stored on
+          LocalStorage. This is first time to make shopping carts.
+          It's kind of different with TodoList. From Product page to Carts page,
+          It needs to render two page.
+              </p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="./Blog /index.html">
+            <div class="img">
+              <img src="./projectsImg/blog.png" alt="" />
+            </div>
+            <div class="text">
+              <h2>Blog</h2>
+              <p>
+                &emsp; The data of Blog is stored on LocalHost. I'm using the "JSON SERVER" to create my
+          Local Database for training Restful API.
+          The methods I use "GET", "POST", "PATCH", "DELETE", which are CRUD.
+          This is my first time to touch the CRUD.
+              </p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </main>
+    <footer>
+      <p>This static website is made by Alan Chen.</p>
+      <div class="github">
+        <i class="bx bxl-github"></i>
+        <p>
+          Source Code:
+          <a href="https://github.com/i39u65f51q/JS-Portofolio.git"
+            >Click Here</a
+          >
+        </p>
+      </div>
+      <p>Thank You for Visiting my website !</p>
+    </footer>
+    <script>
+      const headerHeight = document.querySelector('header').getBoundingClientRect().height
+      const sideBar = document.querySelector('.sidebar')
+      window.addEventListener('scroll', () =>{
+        if(scrollY > headerHeight){
+          sideBar.classList.add('show')
+        }else{
+          sideBar.classList.remove('show')
+        }
+      })
+    </script>
   </body>
 </html>
