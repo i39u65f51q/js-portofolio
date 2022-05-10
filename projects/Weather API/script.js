@@ -5,6 +5,7 @@ const weather = document.querySelector('.weather');
 
 fetch(url, {
   method: 'GET',
+  withCredentials: true,
   headers: {
     'X-Auth-Token': '87f95b1f1cba48228b043348222504',
     'Content-Type': 'application/json',
