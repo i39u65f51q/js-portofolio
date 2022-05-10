@@ -1,5 +1,5 @@
 const url =
-  'http://api.weatherapi.com/v1/current.json?key=87f95b1f1cba48228b043348222504&q=Taiwan&aqi=no';
+  'http://api.weatherapi.com/v1/current.json?key=87f95b1f1cba48228b043348222504&q=Taiwan&aqi=yes';
 
 const weather = document.querySelector('.weather');
 

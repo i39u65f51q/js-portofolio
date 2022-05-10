@@ -104,7 +104,7 @@ const articles = [
   },
   {
     src: './articles/cat.html',
-    img: './css/img/cat.JPG',
+    img: './css/img/cat.jpg',
     title: 'My Cat "Moon"',
     body: '&emsp; I have a cat. Her name is “Moon”. One day, my friend he called me, he saw a kitten was trapped in a tire, and asks me to help. She was meowing loudly for a while. We didn’t see her parents around, so I take her to home. I remember the first time I saw her. She was very small. Her age was between a month and two months. Then, she became my responsibility. I became her father. <br>Few days past, I started to realize that raising a kid would drive me crazy, and I also understand how exhausting was when my parents were raising me. I spent my whole day to take care my cat. For instance, I had to play with her, feed her, and watch her. Especially, she was meowing loudly. My ears hurt. Days by days, I found I can understand the cat’s language. The sounds of meowing had different rhythms, which was very helpful for me. I can know she was hungry or angry, or maybe I was crazy. Another problem let me have headache, which was picky eater. If the feed smell like not yummy, she would not eat all the day. Therefore, I spent long time on looking for a feed that she like. <br>After a year, she’s gradually growing up. She’s not often on meowing, and more mature than before as an adult. Nowadays, I think she is a happy cat and living with comfortable life. She doesn’t have to wander on street',
   },
