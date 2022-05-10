@@ -112,7 +112,7 @@ const articles = [
     src: './articles/thought.html',
     img: './css/img/IMG_3838.jpeg',
     title: '"My Thought" after finish the Website',
-    body: '&emsp; Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum id iste minus in animi saepe atque porro veritatis placeat dolor. Quas ad sit aliquam doloribus officia culpa quo porro nesciunt ullam laborum autem delectus ea perspiciatis explicabo ducimus id, maxime aperiam distinctio ipsum labore asperiores sapiente voluptatibus repellat quam? Molestiae sit, perferendis a omnis corrupti qui doloribus consequatur at ullam expedita, eaque, molestias esse exercitationem quae hic quo? Consequuntur, minima veritatis est architecto necessitatibus obcaecati sed quidem molestias saepe nesciunt repellat nam et quasi dolorem recusandae deleniti ratione soluta vero consequatur, ea at facilis, cumque numquam. Ratione, facere. Nam, obcaecati?',
+    body: 'It’s so glad that I finish the first static website finally. The total time costs me for 2 weeks from organizing the concepts and functions to finishing the project. The process is not easy, but I learn a lot from this static website. For instance, I know more about how to operate the function of array and how create the TodoList and Shopping Carts with LocalStorage. I think LocalStorage is similar with DataBase. It also needs the methods of CRUD as API. After this experience, I still have a large step that need to work hard. Some basic concept of JavaScript such as Promise and Async Await is I’m desired to understand and operate it. When I learn a lot, I feel more interesting. Today always better than yesterday.',
   },
 ];
 //Pagination
