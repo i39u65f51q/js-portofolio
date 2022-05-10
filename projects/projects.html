@@ -46,6 +46,7 @@
           ></a>
         </li>
       </ul>
+     
     </div>
     <main>
       <div class="title">
@@ -131,7 +132,7 @@
       <p>Thank You for Visiting my website !</p>
     </footer>
     <script>
-      const headerHeight = document.querySelector('header').getBoundingClientRect().height
+      const headerHeight = document.querySelector('header').getBoundingClientRect().height;
       const sideBar = document.querySelector('.sidebar')
       window.addEventListener('scroll', () =>{
         if(scrollY > headerHeight){
@@ -139,7 +140,18 @@
         }else{
           sideBar.classList.remove('show')
         }
-      })
+      });
+
+      const menuBtn = document.querySelector('.menu-btn');
+      const navList = document.querySelector('nav ul');
+      window.addEventListener('click', e => {
+        console.log(e.target);
+      if (e.target.classList.contains('menu-btn')) {
+        navList.classList.add('active');
+      } else {
+      navList.classList.remove('active');
+      }
+    });
     </script>
   </body>
 </html>

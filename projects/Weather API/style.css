@@ -40,3 +40,21 @@ a {
 a:hover {
   background-color: #fff;
 }
+@media screen and (max-width: 900px) {
+  body {
+    height: auto;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  .weather {
+    width: 80vw;
+    height: auto;
+  }
+  .intro {
+    width: 80vw;
+    height: auto;
+  }
+}

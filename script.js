@@ -80,7 +80,7 @@ function CarouselHandler() {
 const articles = [
   {
     src: './articles/paths.html',
-    img: './css/img/me.jpg',
+    img: './css/img/IMG_0122.jpeg',
     title: 'The Paths I walked through',
     body: '&emsp; In article, I want to share about my paths and my thoughts, why I chose this path as my final path.<br> I want to share my education first.<br/> In high school. I studied in Food and Beverage department. <br/> I thought if I had a skill, it would help me get the job easier. It’s true. <br/> When I was looking for a part-time, the restaurant they hired me because I had some related and fundamental knowledge on food. Therefore, they offered me the job, which let me earn my allowance. So, I used to be a waiter, assistant of chef, or bartender. As you know, I have worked in food industry for over 2 years, which let me learn lots of experience. (What I learn from my previous jobs, I write down on another post.) Then, I started to wonder that do I choose chef as my career job. I was 19. I was young. I haven’t finished to travel and explore this world. I still desired to learn a lot, to touch something that I haven’t seen, so I left the restaurant.<br/> In college, I chose the English department as my major. I considered that English is a global language. If I learn it well, it will help me a lot, on business and future. The beginning of period, it’s hard, because my basics is not well, and Professor is lecturing with English without Chinese. I realize if I don’t spend more time to chase them, I will be left behind. The distance will be longer. When I have progress, they also have progress, so the distance is not easy to be shorter. I have to chase and spend more and more time for filling the gap. <br/> When I became a junior in college, I started to think that what do I want to do in the future? I pretty understand I don’t want to be an English teacher, or a translator. I think it’s not suitable for me. If I do, I will live with unhappiness. So, I start to explore and try everything that I’m curious. Accidently, I touch the programming language. I found this is so interesting, so I start to learn such as HTML, CSS, JavaScript, start with Front-End language. This also let me understand the programmer is a job I want to work with for my life. <br/> At the end, I want to say, even the path is not straight, but if the destination is same, how about walk a little longer, those paths bring me precious and meaningful memories.',
   },
@@ -110,8 +110,8 @@ const articles = [
   },
   {
     src: './articles/thought.html',
-    img: './css/img/IMG_5007.png',
-    title: '"My Thought" after finish this website"',
+    img: './css/img/IMG_3838.jpeg',
+    title: '"My Thought" after finish the Website',
     body: '&emsp; Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum id iste minus in animi saepe atque porro veritatis placeat dolor. Quas ad sit aliquam doloribus officia culpa quo porro nesciunt ullam laborum autem delectus ea perspiciatis explicabo ducimus id, maxime aperiam distinctio ipsum labore asperiores sapiente voluptatibus repellat quam? Molestiae sit, perferendis a omnis corrupti qui doloribus consequatur at ullam expedita, eaque, molestias esse exercitationem quae hic quo? Consequuntur, minima veritatis est architecto necessitatibus obcaecati sed quidem molestias saepe nesciunt repellat nam et quasi dolorem recusandae deleniti ratione soluta vero consequatur, ea at facilis, cumque numquam. Ratione, facere. Nam, obcaecati?',
   },
 ];
@@ -182,6 +182,18 @@ function PaginationHandler() {
   });
   pageChange(1);
 }
+//Toggle MenuBtn
+const menuBtn = document.querySelector('.menu-btn');
+const navList = document.querySelector('nav ul');
+window.addEventListener('click', e => {
+  console.log(e.target);
+  if (e.target.classList.contains('menu-btn')) {
+    navList.classList.add('active');
+  } else {
+    navList.classList.remove('active');
+  }
+});
+
 CarouselHandler();
 PaginationHandler();
 window.addEventListener('scroll', scrollHandler);

@@ -22,9 +22,8 @@
         </div>
         <ul>
           <li><a href="../index.html">Home</a></li>
-          <li><a href="./roadmap/roadmap.html">Roadmap</a></li>
-          <li><a href="./projects/projects.html">Projects</a></li>
-          <li><a href="./contact/contact.html">Contact</a></li>
+          <li><a href="roadmap.html">Roadmap</a></li>
+          <li><a href="../projects/projects.html">Projects</a></li>
         </ul>
         <button class="menu-btn">
           <i class="bx bx-menu"></i>
@@ -34,25 +33,53 @@
     <div class="sidebar">
       <ul>
         <li>
-          <a href="./index.html"><i class="bx bx-home"></i></a>
+          <a href="../index.html"><i class="bx bx-home"></i></a>
         </li>
         <li>
-          <a href="./roadmap/roadmap.html">
+          <a href="./roadmap.html">
             <i class="bx bx-map-alt"></i>
           </a>
         </li>
         <li>
-          <a href="./projects/projects.html"
+          <a href="../projects/projects.html"
             ><i class="bx bx-folder-open"></i
           ></a>
         </li>
-        <li>
-          <a href="./contact/contact.html"><i class="bx bx-envelope"></i></a>
-        </li>
       </ul>
     </div>
-    <main></main>
-    <!-- <footer>
+    <main>
+      <div class="title">
+        <h1>My next step of Learning</h1>
+      </div>
+      <ul>
+        <li>
+          <h3>2022/5 - 2022/7</h3>
+          <p>JavaScript: 1. Promise 2. Async function</p>
+        </li>
+        <li>
+          <h3>2022/7 - 2022/9</h3>
+          <p>
+            React: Practice using React framework to make projects. <br />
+            Tailwind: Improving my ability on CSS Framework.
+          </p>
+        </li>
+        <li>
+          <h3>2022/9 - 2022/12</h3>
+          <p>
+            React: 1. Training RestFul API by React. 2. Learning Redux and
+            Next.js.
+          </p>
+        </li>
+        <li>
+          <h3>Next Year</h3>
+          <p>
+            Improving the fundamental knowledge of JavaScript and React, and
+            hope everything will be great.
+          </p>
+        </li>
+      </ul>
+    </main>
+    <footer>
       <p>This static website is made by Alan Chen.</p>
       <div class="github">
         <i class="bx bxl-github"></i>
@@ -64,7 +91,29 @@
         </p>
       </div>
       <p>Thank You for Visiting my website !</p>
-    </footer> -->
-    <script src="script.js"></script>
+    </footer>
+    <script>
+      const headerHeight = document
+        .querySelector('header')
+        .getBoundingClientRect().height;
+      const sideBar = document.querySelector('.sidebar');
+      window.addEventListener('scroll', () => {
+        if (scrollY > headerHeight) {
+          sideBar.classList.add('show');
+        } else {
+          sideBar.classList.remove('show');
+        }
+      });
+      const menuBtn = document.querySelector('.menu-btn');
+      const navList = document.querySelector('nav ul');
+      window.addEventListener('click', e => {
+        console.log(e.target);
+        if (e.target.classList.contains('menu-btn')) {
+          navList.classList.add('active');
+        } else {
+          navList.classList.remove('active');
+        }
+      });
+    </script>
   </body>
 </html>
