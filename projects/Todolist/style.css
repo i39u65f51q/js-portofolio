@@ -131,9 +131,7 @@ main input.edit {
 .intro span {
   color: rgb(68, 108, 194);
 }
-.add-btn {
-  display: none;
-}
+
 @media screen and (max-width: 900px) {
   body {
     height: 100%;
@@ -157,16 +155,5 @@ main input.edit {
   }
   header {
     position: relative;
-  }
-  .add-btn {
-    display: block;
-    color: rgb(48, 175, 55);
-    width: 2em;
-    height: 100%;
-    font-size: 20px;
-    position: absolute;
-    right: 0;
-    background-color: #fff;
-    top: 0;
   }
 }

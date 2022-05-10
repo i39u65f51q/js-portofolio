@@ -4,6 +4,7 @@ const filterBtns = document.querySelectorAll('.filter li');
 
 const list = JSON.parse(localStorage.getItem('list')) || [];
 function addItemToStorage(e) {
+  if (e.keyCode !== 13) return;
   let item = {
     item: input.value,
     status: 'Pending',
@@ -163,13 +164,7 @@ function filterHandler(e) {
 
 render();
 
-input.addEventListener('keyup', e => {
-  if (e.keyCode === 13) {
-    addItemToStorage();
-  }
-});
+input.addEventListener('keyup', addItemToStorage);
 filterBtns.forEach(btn => {
   btn.addEventListener('click', filterHandler);
 });
-//RWD addBtn
-document.querySelector('.add-btn').addEventListener('click', addItemToStorage);
