@@ -3,7 +3,13 @@ const url =
 
 const weather = document.querySelector('.weather');
 
-fetch(url, { method: 'GET' })
+fetch(url, {
+  method: 'GET',
+  headers: {
+    'X-Auth-Token': '87f95b1f1cba48228b043348222504',
+    'Content-Type': 'application/json',
+  },
+})
   .then(res => res.json())
   .then(succ => render(succ));
 
